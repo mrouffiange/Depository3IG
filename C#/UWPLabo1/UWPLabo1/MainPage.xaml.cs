@@ -29,8 +29,8 @@ namespace UWPLabo1
     {
         private List<Contact> lstContacts = new List<Contact>()
         {
-            new Contact("Charlier", "Isabelle", "isb@hena.be"),
-            new Contact("Scholtes", "Samuel", "sam@hen.be")
+            new Contact("Charlier", "Isabelle", "isabelle.charlier@henallux.be"),
+            new Contact("Scholtes", "Samuel", "samuel.scholtes@henallux.be")
         };
 
         public MainPage()
