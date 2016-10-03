@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="UWPLabo1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPLabo1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock TextAlignment="Left" FontSize="70" TextWrapping="Wrap" Text="Contact's list"/>
+        <Grid Grid.Row ="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row ="1" Grid.Column="0" TextAlignment="Center" FontSize="32" TextWrapping="Wrap" Text="All the contacts" MinWidth="400"/>
+            <ListView Grid.Row ="2" Grid.Column="0" ItemsSource="{Binding}" Name ="Contacts">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding LastName}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Center" FontSize="32" TextWrapping="Wrap" Text="Details" MinWidth="400"/>
+            <StackPanel Grid.Row="2" Grid.Column="1" DataContext="{Binding ElementName=Contacts, Path=SelectedItem}">
+                <TextBlock Text="{Binding FirstName}" Margin="10,5,5,5"/>
+                <TextBlock Text="{Binding LastName}" Margin="10,5,5,5"/>
+                <TextBlock Text="{Binding Mail}" Margin="10,5,5,5"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+
+</Page>
+
+
+
+<!-- RelativePanel BorderBrush="Gray" BorderThickness="1">
+        <TextBlock x:Name="Title" TextAlignment="Left" FontSize="70" TextWrapping="Wrap" Text="Contact's list"/>
+            <TextBlock x:Name="ContactsList" RelativePanel.Below="Title" TextAlignment="Center" FontSize="32" TextWrapping="Wrap" Text="All the contacts" MinWidth="400"/>
+            <ListView ItemsSource="{Binding}" Name ="Contacts" RelativePanel.Below="ContactsList"  RelativePanel.AlignLeftWith="ContactsList" RelativePanel.AlignRightWith="ContactsList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding LastName}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <TextBlock x:Name="ContactsDetails" RelativePanel.Below="Title" RelativePanel.RightOf="ContactsList" TextAlignment="Center" FontSize="32" TextWrapping="Wrap" Text="Details" MinWidth="400"/>
+            <StackPanel RelativePanel.Below="ContactsDetails" RelativePanel.RightOf="ContactsList" RelativePanel.AlignLeftWith="ContactsDetails" RelativePanel.AlignRightWith="ContactsDetails" DataContext="{Binding ElementName=Contacts, Path=SelectedItems}">
+                <TextBlock Text="{Binding FirstName}"/>
+                <TextBlock Text="{Binding LastName}"/>
+                <TextBlock Text="{Binding Email}"/>
+            </StackPanel>
+<TextBlock TextAlignment="Left" FontSize="70" TextWrapping="Wrap" Text="Contact's list"/>
+        </RelativePanel -->
