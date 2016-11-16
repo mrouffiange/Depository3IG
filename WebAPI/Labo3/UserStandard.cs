@@ -9,11 +9,16 @@ using System.Runtime.Serialization;
 namespace Labo3
 {
     //[DataContract(IsReference = true)]
+    [DataContract]
     public class UserStandard : User
     {
+        [DataMember]
         public string LastName { get; set; }
+        [DataMember]
         public string FirstName { get; set; }
+        [DataMember]
         public string EMail { get; set; }
+        [DataMember]
         public DateTime Birthdate { get; set; }
         public IList<UserPromoter> FavoritePromoters { get; set; }
         public IList<Success> Success { get; set; }

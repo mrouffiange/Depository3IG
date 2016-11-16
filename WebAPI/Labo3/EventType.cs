@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 namespace Labo3
 {
     //[DataContract(IsReference = true)]
+    [DataContract]
     public class EventType
     {
         [Key]
+        [DataMember]
         public string Name { get; set; }
+        [DataMember]
         public int MinimumAge { get; set; }
         public IList<Event> Events { get; set; }
         public IList<Event> Promoters { get; set; }

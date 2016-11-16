@@ -9,6 +9,7 @@ using System.Runtime.Serialization;
 namespace Labo3
 {
     //[DataContract(IsReference = true)]
+    [DataContract]
     public class Filter
     {
         [Key]

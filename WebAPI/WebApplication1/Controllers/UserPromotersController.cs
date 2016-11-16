@@ -20,7 +20,8 @@ namespace WebApplication1.Controllers
         // GET: api/UserPromoters
         public IQueryable<UserPromoter> GetUserPromoters()
         {
-            return db.UserPromoters;
+            var promoters = db.UserPromoters.Include(c => c.Type);
+            return promoters;
         }
 
         // GET: api/UserPromoters/5
