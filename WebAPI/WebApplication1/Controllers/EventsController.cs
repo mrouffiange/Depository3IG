@@ -21,7 +21,6 @@ namespace WebApplication1.Controllers
         public IQueryable<Event> GetEvents()
         {
             var events = db.Events.Include(c => c.EventPromoter);
-            //Console.WriteLine(events.First().EventPromoter.Login);
             return events;
         }
 

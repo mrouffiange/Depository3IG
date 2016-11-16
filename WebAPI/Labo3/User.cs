@@ -4,9 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace Labo3
 {
+    // [DataContract(IsReference = true)]
     public abstract class User
     {
         [Key]

@@ -5,9 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace Labo3
 {
+    //[DataContract(IsReference = true)]
     public class Participation
     {
         [Key, Column(Order = 0)]

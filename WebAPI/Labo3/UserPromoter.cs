@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.Spatial;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 
 namespace Labo3
 {
+    //[DataContract(IsReference = true)]
     public class UserPromoter : User
     {
         public string PromoterName { get; set; }
