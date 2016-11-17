@@ -8,12 +8,13 @@ using System.Runtime.Serialization;
 
 namespace Labo3
 {
-    //[DataContract(IsReference = true)]
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class Filter
     {
         [Key]
+        [DataMember]
         public string Tag { get; set; }
+        [DataMember]
         public IList<Event> Events { get; set; }
         [Timestamp]
         public byte[] RowVersion { get; set; }

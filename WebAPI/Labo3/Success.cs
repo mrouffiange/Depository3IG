@@ -8,8 +8,7 @@ using System.Runtime.Serialization;
 
 namespace Labo3
 {
-    //[DataContract(IsReference = true)]
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class Success
     {
         [Key]
@@ -21,7 +20,7 @@ namespace Labo3
         public int Points { get; set; }
         [Timestamp]
         public byte[] RowVersion { get; set; }
-
+        [DataMember]
         public IList<UserStandard> User { get; set; }
     }
 }

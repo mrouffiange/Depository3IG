@@ -8,8 +8,7 @@ using System.Runtime.Serialization;
 
 namespace Labo3
 {
-    //[DataContract(IsReference = true)]
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class UserStandard : User
     {
         [DataMember]
@@ -20,8 +19,11 @@ namespace Labo3
         public string EMail { get; set; }
         [DataMember]
         public DateTime Birthdate { get; set; }
+        [DataMember]
         public IList<UserPromoter> FavoritePromoters { get; set; }
+        [DataMember]
         public IList<Success> Success { get; set; }
+        [DataMember]
         public IList<Participation> ParticipatedEvents { get; set; }
 
     }

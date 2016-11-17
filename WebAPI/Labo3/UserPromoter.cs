@@ -9,8 +9,7 @@ using System.Runtime.Serialization;
 
 namespace Labo3
 {
-    //[DataContract(IsReference = true)]
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class UserPromoter : User
     {
         [DataMember]
@@ -27,8 +26,11 @@ namespace Labo3
         public double Grade { get; set; }
         [DataMember]
         public EventType Type { get; set; }
+        [DataMember]
         public IList<Event> Events { get; set; }
+        [DataMember]
         public IList<Schedule> Schedules { get; set; }
+        [DataMember]
         public IList<UserStandard> Followers { get; set; }
 
     }

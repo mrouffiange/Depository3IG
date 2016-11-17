@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace Labo3
 {
-    //[DataContract(IsReference = true)]
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class EventType
     {
         [Key]

@@ -21,6 +21,8 @@ namespace WebApplication1.Controllers
         public IQueryable<UserPromoter> GetUserPromoters()
         {
             var promoters = db.UserPromoters.Include(c => c.Type);
+            promoters.Include(c => c.Events);
+            promoters.Include(c => c.Followers);
             return promoters;
         }
 

@@ -8,8 +8,7 @@ using System.Runtime.Serialization;
 
 namespace Labo3
 {
-    // [DataContract(IsReference = true)]
-    [DataContract]
+    [DataContract(IsReference = true)]
     public abstract class User
     {
         [Key]

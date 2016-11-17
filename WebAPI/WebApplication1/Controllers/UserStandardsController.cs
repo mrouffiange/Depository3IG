@@ -20,7 +20,10 @@ namespace WebApplication1.Controllers
         // GET: api/UserStandards
         public IQueryable<UserStandard> GetUserStandards()
         {
-            return db.UserStandards;
+            var users = db.UserStandards.Include(c => c.FavoritePromoters);
+            users.Include(c => c.ParticipatedEvents);
+            users.Include(c => c.Success);
+            return users;
         }
 
         // GET: api/UserStandards/5

@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 
 namespace Labo3
 {
-    //[DataContract(IsReference = true)]
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class Event
     {
         [Key]
@@ -34,6 +33,7 @@ namespace Labo3
         public UserPromoter EventPromoter { get; set; }
         [DataMember]
         public EventType TypeOfEvent { get; set; }
+        [DataMember]
         public IList<Filter> Filters { get; set; }
         [Timestamp]
         public byte[] RowVersion { get; set; }
