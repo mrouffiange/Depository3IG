@@ -21,7 +21,9 @@ namespace Labo3
         [DataMember]
         public string Description { get; set; }
         [DataMember]
-        public DbGeography GeographicalCoordinates { get; set; }
+        public string PhoneNumber { get; set; }
+        //[DataMember]
+        //public DbGeography GeographicalCoordinates { get; set; }
         [DataMember]
         public double Grade { get; set; }
         [DataMember]

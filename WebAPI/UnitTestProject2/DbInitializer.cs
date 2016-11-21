@@ -14,7 +14,7 @@ namespace UnitTestProject2
         {
             EventType eventType = new EventType()
             {
-                Name = "Name",
+                Name = "Cinema",
                 MinimumAge = 12
             };
             context.EventTypes.Add(eventType);
